@@ -1,0 +1,63 @@
+<!-- Felipe Melo Moura - 5° A -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Noticias</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Notícias</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="/" class="btn btn-warning">Home</a>
+                        <a href="/adicionar_noticia" class="btn btn-success">+ Novo</a>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <div class="row justify-content-center"> 
+
+            <% for (let i = 0; i<noticias.length; i++) { %>
+
+            <div class="card" style="width: 18rem; margin: 1.5rem;">
+                <img src="https://i.pinimg.com/200x150/ff/17/30/ff1730608b028ad5d2f4d01320b9ffa4.jpg" class="card-img-top" alt="fotinha">
+                <div class="card-body">
+                  <h5 class="card-title">Título: <%=noticias[i].titulo%></h5>
+                  <p class="card-text">Resumo: <%=noticias[i].resumo%></p>
+                  <a href="/noticia/<%=noticias[i].id_noticia%>" class="btn btn-info">Ver Notícia</a>
+                </div>
+              </div>
+
+              <% } %>
+
+            <!-- <table class="table">
+                
+                
+
+                <% for (let i = 0; i<noticias.length; i++) { %>
+                    <tr>
+                        <td><%=noticias[i].id_noticia%></td>
+
+                        <td><%=noticias[i].titulo%></td>
+
+                        <td>
+                            <a href="/noticia/<%=noticias[i].id_noticia%>" class="btn btn-info"> Ver notícia </a>
+                        </td>
+
+                    </tr>
+                    <% } %>
+
+            </table> -->
+
+        </div>
+    </div>
+</body>
+</html>

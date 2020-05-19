@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Cadastro de notica</title>
+</head>
+<body>
+    
+    <form class = "form-row" action="/salvarNoticia" method="post">
+        
+        <div class="container">
+
+            <h1>Adicionar noticia</h1>
+    
+            <div class="form-group ">
+                <label>Título</label>
+                <input class="form-control" type="text" id="titulo" name="titulo"></input>
+            </div>
+
+            <div class="form-group ">
+                <label>Resumo</label>
+                <input class="form-control" type="text" id="resumo" name="resumo"></input>
+            </div>
+        
+            <div class="form-group">
+                <label>Autor da Noticia</label>
+                <input class="form-control" type="text" id="autor" name="autor"></input>
+            </div>
+
+            <div class="form-group">
+                <label>Data da Noticía</label>
+                <input class="form-control" type="date" id="data_noticia" name="data_noticia"></input>
+            </div>
+
+            <div class="form-group">
+                <label>Notícia</label>
+                <textarea class="form-control" type="text" id="noticia" rows="5" cols="30" name="noticia"></textarea>
+            </div>
+
+            <a class="btn btn-primary" type="submit">Enviar</a>
+            <a href="/noticias" class="btn btn-danger">Voltar</a>
+
+        </div>
+
+    </form>
+
+
+
+</body>
+</html>
